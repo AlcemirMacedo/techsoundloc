@@ -1,20 +1,155 @@
+/*RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, b, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*END RESET CSS*/
+
+/*CONFIGURAÇÕES GLOBAIS*/
 :root{
     --gray-one:#EEEEEE;
     --green-one: #B2CE5D;
-    --green-two: #51680C;
+    --green-two: rgb(82, 105, 12);
     --black: #000000;
-}
-*{
-    margin: 0;
-    padding: 0;
+    --orange: #e68609;
+    --back-green-alpha: rgb(11, 78, 34);
 }
 
+body{
+    font-family: 'Raleway', 'Poppins', Helvetica, sans-serif;
+}
 .container{
-    
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+}
+button{
+    background-color: var(--green-one);
+    color: var(--black);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 800;    
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: var(--orange);
+    color: var(--black);
 }
 
+/*END CONFIGURAÇÕES GLOBAIS*/
+
+/*HEADER*/
 header{
     width: 100vw;
     height: 80px;
     background-color: var(--gray-one);
 }
+header .container{
+    justify-content: space-between;
+    align-items: center;
+}
+header .contato{
+    display: flex;
+    align-items: center;
+}
+header .contato .numero{
+    font-family: 'Poppins';
+    font-weight: 300;
+    margin-right: 30px;
+    font-size: 16pt;
+}
+
+/*END HEADER*/
+
+/*NAV*/
+nav{
+    background-color: #B2CE5D;
+    height: 50px;
+    text-transform: uppercase;
+}
+nav .container{
+    align-items: center;
+    justify-content: center;
+}
+nav .container ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    font-size: 16pt;
+    font-weight: 300;
+    transition: 0.3s;
+}
+nav ul a{
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.3s;  
+}
+nav ul a:link{
+    transition: 0.3s; 
+}
+nav ul a:hover{
+    color: var(--gray-one); 
+    transition: 0.3s;
+}
+/*NAV*/
+
+/*SECTION BANNER*/
+.banner{
+    width: 100wh;
+    height: 500px;
+    background-image: url("../assets/imagens/moveis-para-eventos-festas.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.background-mask{
+    background-color: rgba(11, 78, 34,0.8);
+    height: 500px;
+    width: 100vw;
+}
+/*END SECTION BANNER*/
