@@ -22,7 +22,6 @@ time, mark, audio, video {
     margin: 0;
 	padding: 0;
 	border: 0;
-    overflow-x: hidden
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -53,6 +52,7 @@ table {
 /*CONFIGURAÇÕES GLOBAIS*/
 :root{
     --gray-one:#EEEEEE;
+    --gray-two: #b2b2b2;
     --green-one: #B2CE5D;
     --green-two: rgb(82, 105, 12);
     --black: #000000;
@@ -81,7 +81,7 @@ button{
     transition: 0.3s;
 }
 button:hover{
-    background-color: var(--orange);
+    background-color: var(--gray-two);
     color: var(--black);
 }
 
@@ -123,14 +123,14 @@ nav .container{
 }
 nav .container ul{
     display: flex;
-    width: 920px;
     justify-content: space-between;
-    font-size: 16pt;
+    font-size: 1.2rem;
     font-weight: 300;    
 }
 nav .container ul li{
     height: auto;
-    overflow-y: hidden
+    overflow-y: hidden;
+    margin-right: 2.5rem;
 }
 nav ul a{
     text-decoration: none;
@@ -145,17 +145,27 @@ nav ul a:hover{
 /*NAV*/
 
 /*SECTION BANNER*/
-.banner{
-    width: 100wh;
+
+.main-banner{
+    overflow: hidden;
+}
+.area-total-banner{
+    width: 1000vw;
     height: 500px;
-    background-image: url("../assets/imagens/moveis-para-eventos-festas.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: yellow;
+}
+.background-banner{
+    width: 100vw;
+    height: 100%;
+    background-image: url(../assets/imagens/moveis-para-eventos-festas.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
 }
 .background-mask{
-    background-color: rgba(11, 78, 34,0.8);
-    height: 500px;
+    background-color: rgba(11, 78, 34, 0.8);
+    height: 100%;
     width: 100vw;
 }
 /*END SECTION BANNER*/
