@@ -123,13 +123,11 @@ nav .container{
 }
 nav .container ul{
     display: flex;
-    width: 920px;
-    justify-content: space-between;
-    font-size: 16pt;
+    font-size: 1rem;
     font-weight: 300;    
 }
 nav .container ul li{
-    height: auto;
+    margin-right: 50px;
     overflow-y: hidden
 }
 nav ul a{
