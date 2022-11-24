@@ -123,6 +123,7 @@ nav .container{
 }
 nav .container ul{
     display: flex;
+<<<<<<< HEAD
     justify-content: space-between;
     font-size: 1.2rem;
     font-weight: 300;    
@@ -131,6 +132,14 @@ nav .container ul li{
     height: auto;
     overflow-y: hidden;
     margin-right: 2.5rem;
+=======
+    font-size: 1rem;
+    font-weight: 300;    
+}
+nav .container ul li{
+    margin-right: 50px;
+    overflow-y: hidden
+>>>>>>> 09d6fc7eeecd8eaa332717e6c62ee67f153148a2
 }
 nav ul a{
     text-decoration: none;
