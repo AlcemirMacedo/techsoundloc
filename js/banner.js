@@ -25,4 +25,4 @@ function atualizaMargin(){
     document.querySelector('.area-total-banner').style.marginLeft = `-${novaMargem}px`
 }
 
-//setInterval(goToNext, 4000);
+setInterval(goToNext, 5000);
