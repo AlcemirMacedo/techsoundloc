@@ -22,6 +22,7 @@ time, mark, audio, video {
     margin: 0;
 	padding: 0;
 	border: 0;
+    box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -30,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;    
+	line-height: 1;
+    overflow-x: hidden; 
 }
 ol, ul {
 	list-style: none;
@@ -52,6 +54,7 @@ table {
 /*CONFIGURAÇÕES GLOBAIS*/
 :root{
     --gray-one:#EEEEEE;
+    --white: #ffffff;
     --gray-two: #b2b2b2;
     --green-one: #B2CE5D;
     --green-two: rgb(82, 105, 12);
@@ -123,7 +126,6 @@ nav .container{
 }
 nav .container ul{
     display: flex;
-<<<<<<< HEAD
     justify-content: space-between;
     font-size: 1.2rem;
     font-weight: 300;    
@@ -132,14 +134,12 @@ nav .container ul li{
     height: auto;
     overflow-y: hidden;
     margin-right: 2.5rem;
-=======
     font-size: 1rem;
     font-weight: 300;    
 }
 nav .container ul li{
     margin-right: 50px;
-    overflow-y: hidden
->>>>>>> 09d6fc7eeecd8eaa332717e6c62ee67f153148a2
+    overflow: hidden
 }
 nav ul a{
     text-decoration: none;
@@ -148,7 +148,7 @@ nav ul a{
 }
 
 nav ul a:hover{
-    color: var(--gray-one); 
+    color: var(--white); 
     transition: 0.3s;
 }
 /*NAV*/
@@ -158,13 +158,13 @@ nav ul a:hover{
 .main-banner{
     overflow: hidden;
 }
-.area-total-banner{
+.main-banner .area-total-banner{
     width: 1000vw;
     height: 500px;
-    background-color: yellow;
 }
-.background-banner{
+.main-banner .background-banner{
     width: 100vw;
+    margin-left: -4px;
     height: 100%;
     background-image: url(../assets/imagens/moveis-para-eventos-festas.jpg);
     background-repeat: no-repeat;
@@ -172,9 +172,45 @@ nav ul a:hover{
     background-size: cover;
     display: inline-block;
 }
-.background-mask{
-    background-color: rgba(11, 78, 34, 0.8);
+.main-banner .background-mask{
+    background-color: rgba(11, 78, 34, 0.67);
     height: 100%;
     width: 100vw;
+    margin: 0;
 }
+.main-banner .text-area{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.main-banner .text-area h1{
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--white);
+    text-align: center;
+    line-height: 75px;
+}
+/*pointers*/
+.pointer-area{
+    width: 100vw;
+    height: 14px;
+    margin-top: -50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pointer-area .pointer{
+    width: 14px;
+    height: 14px;
+    background-color: var(--gray-two);
+    border-radius: 7px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.pointer-area .active{
+    background-color: var(--green-one);
+}
+
 /*END SECTION BANNER*/
